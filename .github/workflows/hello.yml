@@ -1,0 +1,23 @@
+name: Hello World Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Kodu indir
+        uses: actions/checkout@v4
+
+      - name: Merhaba de
+        run: echo "Merhaba! İlk workflow çalıştı! 🎉"
+
+      - name: Tarih yazdır
+        run: date
+
+      - name: Klasör içeriğini göster
+        run: ls -la
